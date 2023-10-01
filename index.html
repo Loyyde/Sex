@@ -1,31 +1,18 @@
-<!DOCTYPE html>
-<html>
-  <head>
+<a href="https://twitter.com/home" id="playVideoLink">
+  <img src="image.jpg" alt="Image">
+</a>
 
-    <!-- Thumbnail image/gif -->
-    <meta property="og:image" content="https://raw.githubusercontent.com/Loyyde/Sex/main/Media/download.jpeg">
-    <meta property="og:type" content="video.other">
-    
-    <!-- Video Link -->
-    <meta property="og:video:url" content="https://raw.githubusercontent.com/Loyyde/Sex/main/Media/More bullets.mp4">
-    <meta property="og:video:height" content="168">
-    <meta property="og:video:width" content="300">
-    <video id="myVideo" src="https://raw.githubusercontent.com/Loyyde/Sex/main/Media/More bullets.mp4"></video>
-<img id="myImage" src="ttps://raw.githubusercontent.com/Loyyde/Sex/main/Media/download.jpeg" style="display: none;">
+<video id="myVideo" src="https://raw.githubusercontent.com/Loyyde/Sex/main/Media/More bullets.mp4"></video>
+<img id="myEndImage" src="https://raw.githubusercontent.com/Loyyde/Sex/main/Media/download.jpeg" style="display: none;">
 
 <script>
-var video = document.getElementById("myVideo");
-var image = document.getElementById("myImage");
+document.getElementById("playVideoLink").addEventListener("click", function() {
+  var video = document.getElementById("myVideo");
+  video.play();
 
-video.addEventListener("ended", function() {
-  // Display the image
-  image.style.display = "block";
+  video.addEventListener("ended", function() {
+    // Display the end image
+    document.getElementById("myEndImage").style.display = "block";
+  });
 });
 </script>
-   
-    <!-- Redirect -->
-    <meta http-equiv="refresh" content="0; url=https://store.steampowered.com/app/1635590/My_Friend_Peppa_Pig/" />
-  </head>
-  <body>
-  </body>
-</html>
